@@ -1,13 +1,12 @@
 Guide to using NextJS
-
-1. We start from main.ts file which is the entry point for our app. Here we define port for server and express() is imported from NextFactory.
-2. We initialize AppModule which contains all our top level imports such as service providers and controllers.
-3. In NestJS, it is common practice to create a directory for a specific concern. ( meg : Student Directory ) which ships all the relevant code.
-4. In the DTO (Data Transfer Object) Directory, we declare classes for types of incoming request. Purpose of DTO is typechecking.
-5. There is no controllers directory. Controller file is found in the same directory as DTO. 
-6. From DTO we get to type check out request. All the controller specific comments are in student.controller.ts file.
-7. Then we create a service file which provides all the function definitions. eg : student.service.ts. 
-8. This file is supposed to create a class which is exported to app.module.ts along with controller. 
-9. All the service.ts specific notes are in student.service.ts.
-10.Pipes in NextJS are used as validators for request data type. If request data is invalid, that request doesnt reach controller.
-11.Middlewares are similar to express. Check out src/common/middlewares/validStudent.middleware.ts
+* We start from main.ts file which is the entry point for our app. Here we define port for server and express() is imported from NextFactory.
+* We initialize AppModule which contains all our top level imports such as service providers and controllers.
+* In NestJS, it is common practice to create a directory for a specific concern. ( meg : Student Directory ) which ships all the relevant code.
+* In the DTO (Data Transfer Object) Directory, we declare classes for types of incoming request. Purpose of DTO is typechecking.
+* There is no controllers directory. Controller file is found in the same directory as DTO. 
+* From DTO we get to type check out request. All the controller specific comments are in student.controller.ts file.
+* Then we create a service file which provides all the function definitions. eg : student.service.ts. 
+* This file is supposed to create a class which is exported to app.module.ts along with controller. 
+* All the service.ts specific notes are in student.service.ts.
+* Pipes in NextJS are used as validators for request data type. If request data is invalid, that request doesnt reach controller.
+* Middlewares are similar to express. Check out src/common/middlewares/validStudent.middleware.ts
